@@ -31,9 +31,13 @@ public class PracticaBucles {
      *   Utiliza solo bucles while
      */
     public void generarNumeros(int n)   {
-        //TODO
-
-    }
+        // System.out.println("Nºmaximo de aleatorios a generar " + n + " o hasta que salga el 0");
+        // int contador = 0;
+        // int aleatorio = (Math.random(6001)-1000);
+        // while(contador <= n || aleatorio == 0) {
+        // new Random();
+        // }
+    } 
 
     /**
      *  Devuelve true si numero es impar, false en otro caso
