@@ -55,6 +55,7 @@ public class PracticaBucles {
             }
 
         }
+        media = media / n;
         System.out.println();
         System.out.println();
         System.out.printf("%25s" + "%10.2f", "Media: ",media);
