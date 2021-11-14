@@ -37,7 +37,7 @@ public class PracticaBucles {
         int aleatorio = generador.nextInt(6001)-1000;
         double media = 0;
         int sImpar = 0;
-        int mPar = 0;
+        int mPar = aleatorio;
         while(contador <= n || aleatorio == 0) {
             System.out.printf("%15d"+"%s"+"%10d",aleatorio, ":" , obtenerNumeroSinCeros(aleatorio)); 
             media += aleatorio;
@@ -121,8 +121,15 @@ public class PracticaBucles {
      *   
      */
     public void escribirLetraN(int altura)    {
-        //TODO
-
+        int contador = 1;
+        
+        String espacios = "";
+        while (contador <= altura) {
+            espacios += ESPACIO;
+            
+            contador++;
+        }
+        String.format("@" + espacios + "@");
     }
 
     /**
@@ -130,7 +137,8 @@ public class PracticaBucles {
      *  con bucles for
      */
     private void escribirCaracter(char caracter, int n)    {
-        //TODO
-
+        for(int i = 1; i <= n; i++) {
+            System.out.print(caracter);
+        }
     }
 }
