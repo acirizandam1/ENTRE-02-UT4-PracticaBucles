@@ -121,17 +121,20 @@ public class PracticaBucles {
      *   
      */
     public void escribirLetraN(int altura)    {
-      int numero = 0;
+        int numero = 0;
+        int contador = 0;
         for(int i = 1; i <= altura; i++) {
-            
-            escribirCaracter(CARACTER , 3);
+            escribirCaracter(CARACTER , 1);
             escribirCaracter(ESPACIO,numero);
-            // System.out.println();
-            numero+= 5;
-            
+            escribirCaracter(CARACTER , 1);
+            numero +=1;
+            // int numero2 = numero-;
+            escribirCaracter(ESPACIO,numero);
+            escribirCaracter(CARACTER , 1);
+            System.out.println();
+
 
         }
-
         // for(int i = 1; i <= altura; i++) {
         // escribirCaracter('@' , 1);
         // System.out.println();
@@ -152,7 +155,7 @@ public class PracticaBucles {
      */
     private void escribirCaracter(char caracter, int n)    {
         for(int i = 1; i <= n; i++) {
-             System.out.printf("%s",caracter);
+            System.out.printf("%s",caracter);
         }
     }
 }
