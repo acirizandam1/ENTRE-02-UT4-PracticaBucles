@@ -28,10 +28,22 @@ public class TestPracticaBucles
         PracticaBucles test1 = new PracticaBucles();
         System.out.println("Dame nº maximo de aleatorios a generar (n > 0)");
         int nMaximo = teclado.nextInt();
-        while(nMaximo <= 0){
+        if(nMaximo <= 0){
             System.out.println("Dame un maximo valido");
+
+            nMaximo = teclado.nextInt();
         }
+
         test1.generarNumeros(nMaximo);
+        Utilidades.hacerPausa();
+        Utilidades.borrarPantalla();
+        System.out.println("Teclea altura de la letra N(3<= altura <= 10");
+        int altura = teclado.nextInt();
+        if(altura <3 || altura >10) {
+            System.out.println("Altura Incorrecta");
+            altura = teclado.nextInt();
+        }
+        test1. escribirLetraN( altura);
     }
 }
 
