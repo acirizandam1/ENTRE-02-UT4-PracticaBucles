@@ -37,14 +37,14 @@ public class PracticaBucles {
         int aleatorio = generador.nextInt(6001)-1000;
         double media = 0;
         int sImpar = 0;
-        int mPar = aleatorio;
+        int mPar = Integer.MIN_VALUE;
         while(contador <= n || aleatorio == 0) {
             System.out.printf("%15d"+"%s"+"%10d",aleatorio, ":" , obtenerNumeroSinCeros(aleatorio)); 
             media += aleatorio;
             if(esImpar(aleatorio)) {
                 sImpar += aleatorio;
             }
-
+            
             if (aleatorio > mPar && !esImpar(aleatorio)) {
                 mPar= aleatorio;
             }
@@ -55,6 +55,7 @@ public class PracticaBucles {
             }
 
         }
+
         media = media / n;
         System.out.println();
         System.out.println();
@@ -62,7 +63,13 @@ public class PracticaBucles {
         System.out.println();
         System.out.printf("%25s" + "%10d", "Suma impares: ",sImpar);
         System.out.println();
-        System.out.printf("%25s" + "%10d", "Máximo pares: ",mPar);
+        if (mPar == Integer.MIN_VALUE){
+            System.out.println("No hay ningun par");
+        }
+        else{
+            System.out.printf("%25s" + "%10d", "Máximo pares: ",mPar);
+        }
+
     }
 
     /**
@@ -121,32 +128,30 @@ public class PracticaBucles {
      *   
      */
     public void escribirLetraN(int altura)    {
-        int numero = 0;
-        int contador = 0;
-        for(int i = 1; i <= altura; i++) {
-            escribirCaracter(CARACTER , 1);
-            escribirCaracter(ESPACIO,numero);
-            escribirCaracter(CARACTER , 1);
-            numero +=1;
-            // int numero2 = numero-;
-            escribirCaracter(ESPACIO,numero);
-            escribirCaracter(CARACTER , 1);
-            System.out.println();
-
-
-        }
+        // int numero = 0;
+        // int contador = 0;
         // for(int i = 1; i <= altura; i++) {
-        // escribirCaracter('@' , 1);
+        // escribirCaracter(CARACTER , 1);
+        // escribirCaracter(ESPACIO,numero);
+        // escribirCaracter(CARACTER , 1);
+        // numero +=1;
+        // // int numero2 = numero-;
+        // escribirCaracter(ESPACIO,numero);
+        // escribirCaracter(CARACTER , 1);
         // System.out.println();
-        // }
 
-        // String espacios = "";
-        // while (contador <= altura) {
-        // espacios += ESPACIO;
-
-        // contador++;
-        // }
-        // // String.format("@" + espacios + "@");
+        int numero1 = 0;
+        int numero2 = altura - 1;
+        for(int i = 1; i<= altura; i++){
+            escribirCaracter(CARACTER,1);
+            escribirCaracter(ESPACIO,numero1);
+            escribirCaracter(CARACTER,1);
+            escribirCaracter(ESPACIO,numero2);
+            escribirCaracter(CARACTER,1);
+            System.out.println();
+            numero1++;
+            numero2--;
+        }
     }
 
     /**

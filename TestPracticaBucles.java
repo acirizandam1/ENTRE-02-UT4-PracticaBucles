@@ -24,11 +24,14 @@ public class TestPracticaBucles
      *  
      */
     public static void main(String[] args)    {
-        //TODO
-        
-        
-        
-        
+        Scanner teclado = new Scanner(System.in);
+        PracticaBucles test1 = new PracticaBucles();
+        System.out.println("Dame nº maximo de aleatorios a generar (n > 0)");
+        int nMaximo = teclado.nextInt();
+        while(nMaximo <= 0){
+            System.out.println("Dame un maximo valido");
+        }
+        test1.generarNumeros(nMaximo);
     }
 }
 
